@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+   <classPathEntry    location="C:\generator\mysql-connector-java-5.1.34.jar"/>
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://localhost/zxdispach?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true" driverClass="com.mysql.jdbc.Driver" password="yang" userId="root" />
+    <javaModelGenerator targetPackage="gen.model" targetProject="ZXTrackingServlet" />
+    <sqlMapGenerator targetPackage="gen.mapping" targetProject="ZXTrackingServlet" />
+    <javaClientGenerator targetPackage="gen.dao" targetProject="ZXTrackingServlet" type="XMLMAPPER" />
+    
+   
+    <table schema="user" tableName="user">
+      <columnOverride column="id" property="id" />
+      <columnOverride column="userName" property="userName" />
+      <columnOverride column="password" property="password" />
+      <columnOverride column="postion" property="postion" />
+    </table>
+    
+  </context>
+</generatorConfiguration>
